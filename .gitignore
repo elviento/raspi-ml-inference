@@ -1,0 +1,11 @@
+.env
+certs
+greengrass*/
+dlr*
+ggc-mxnet*
+.vscode
+license
+.DS_Store
+*.gz
+*.zip
+*.params

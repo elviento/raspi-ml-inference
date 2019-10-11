@@ -1,0 +1,2824 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm0_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm0_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "batch_norm0_out", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_conv0_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm1_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm1_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu0", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[3, 0, 0], [4, 0, 0], [5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm2_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm2_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu1", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_max_pool2d_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[7, 0, 0], [8, 0, 0], [9, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv0_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm3_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm3_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu2", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[10, 0, 0], [11, 0, 0], [12, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose0", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm4_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm4_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu3", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0], [17, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv2_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv3_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "conv2d56", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d", 
+        "num_inputs": "2", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[10, 0, 0], [20, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add0", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[18, 0, 0], [19, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm5_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm5_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu4", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[22, 0, 0], [23, 0, 0], [24, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv4_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm6_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm6_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu5", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[25, 0, 0], [26, 0, 0], [27, 0, 0], [28, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose1", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm7_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm7_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu6", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[29, 0, 0], [30, 0, 0], [31, 0, 0], [32, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv6_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add1", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[33, 0, 0], [34, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm8_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm8_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu7", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[35, 0, 0], [36, 0, 0], [37, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv7_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm9_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm9_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu8", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[38, 0, 0], [39, 0, 0], [40, 0, 0], [41, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose2", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm10_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm10_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu9", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[42, 0, 0], [43, 0, 0], [44, 0, 0], [45, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage1_conv9_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm11_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm11_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu10", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_broadcast_mul_broadcast_add_relu", 
+        "num_inputs": "5", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[46, 0, 0], [47, 0, 0], [35, 0, 0], [48, 0, 0], [49, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv0_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm12_add_beta_expand_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu11", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[50, 0, 0], [51, 0, 0], [52, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv1_weight_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm13_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu12", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[53, 0, 0], [54, 0, 0], [55, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv2_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv3_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "conv2d63", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_1", 
+        "num_inputs": "2", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[50, 0, 0], [58, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add3", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[56, 0, 0], [57, 0, 0], [59, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm14_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm14_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu13", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[60, 0, 0], [61, 0, 0], [62, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv4_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm15_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm15_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu14", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[63, 0, 0], [64, 0, 0], [65, 0, 0], [66, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose3", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm16_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm16_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu15", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[67, 0, 0], [68, 0, 0], [69, 0, 0], [70, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv6_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add4", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[71, 0, 0], [72, 0, 0], [60, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm17_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm17_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu16", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[73, 0, 0], [74, 0, 0], [75, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv7_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm18_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm18_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu17", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[76, 0, 0], [77, 0, 0], [78, 0, 0], [79, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose4", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm19_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm19_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu18", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[80, 0, 0], [81, 0, 0], [82, 0, 0], [83, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv9_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add5", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[84, 0, 0], [85, 0, 0], [73, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm20_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm20_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu19", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[86, 0, 0], [87, 0, 0], [88, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv10_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm21_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm21_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu20", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[89, 0, 0], [90, 0, 0], [91, 0, 0], [92, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose5", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm22_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm22_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu21", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[93, 0, 0], [94, 0, 0], [95, 0, 0], [96, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage2_conv12_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm23_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm23_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu22", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_broadcast_mul_broadcast_add_relu_1", 
+        "num_inputs": "5", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[97, 0, 0], [98, 0, 0], [86, 0, 0], [99, 0, 0], [100, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv0_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm24_add_beta_expand_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu23", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[101, 0, 0], [102, 0, 0], [103, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv1_weight_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm25_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu24", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu_3", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[104, 0, 0], [105, 0, 0], [106, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv2_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv3_weight_OIHW16o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "conv2d72", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_2", 
+        "num_inputs": "2", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[101, 0, 0], [109, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add7", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[107, 0, 0], [108, 0, 0], [110, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm26_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm26_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu25", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[111, 0, 0], [112, 0, 0], [113, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv4_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm27_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm27_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu26", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_4", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[114, 0, 0], [115, 0, 0], [116, 0, 0], [117, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose6", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm28_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm28_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu27", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[118, 0, 0], [119, 0, 0], [120, 0, 0], [121, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv6_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add8", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[122, 0, 0], [123, 0, 0], [111, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm29_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm29_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu28", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv7_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm30_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm30_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu29", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_4", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0], [130, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose7", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm31_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm31_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu30", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[131, 0, 0], [132, 0, 0], [133, 0, 0], [134, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv9_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add9", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[135, 0, 0], [136, 0, 0], [124, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm32_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm32_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu31", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[137, 0, 0], [138, 0, 0], [139, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv10_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm33_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm33_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu32", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_4", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[140, 0, 0], [141, 0, 0], [142, 0, 0], [143, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose8", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm34_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm34_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu33", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[144, 0, 0], [145, 0, 0], [146, 0, 0], [147, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv12_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add10", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[148, 0, 0], [149, 0, 0], [137, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm35_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm35_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu34", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[150, 0, 0], [151, 0, 0], [152, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv13_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm36_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm36_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu35", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_4", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[153, 0, 0], [154, 0, 0], [155, 0, 0], [156, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose9", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm37_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm37_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu36", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[157, 0, 0], [158, 0, 0], [159, 0, 0], [160, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv15_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add11", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[161, 0, 0], [162, 0, 0], [150, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm38_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm38_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu37", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[163, 0, 0], [164, 0, 0], [165, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv16_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm39_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm39_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu38", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_4", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[166, 0, 0], [167, 0, 0], [168, 0, 0], [169, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose10", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm40_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm40_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu39", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[170, 0, 0], [171, 0, 0], [172, 0, 0], [173, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage3_conv18_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm41_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm41_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu40", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_broadcast_mul_broadcast_add_relu_2", 
+        "num_inputs": "5", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[174, 0, 0], [175, 0, 0], [163, 0, 0], [176, 0, 0], [177, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv0_weight_OIHW8o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm42_add_beta_expand_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu41", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu_4", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[178, 0, 0], [179, 0, 0], [180, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv1_weight_sc", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm43_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu42", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_add_relu_5", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[181, 0, 0], [182, 0, 0], [183, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv2_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv3_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "conv2d85", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_3", 
+        "num_inputs": "2", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[178, 0, 0], [186, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add13", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_3", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[184, 0, 0], [185, 0, 0], [187, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm44_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm44_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu43", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[188, 0, 0], [189, 0, 0], [190, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv4_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm45_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm45_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu44", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_5", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[191, 0, 0], [192, 0, 0], [193, 0, 0], [194, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose11", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm46_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm46_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu45", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[195, 0, 0], [196, 0, 0], [197, 0, 0], [198, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv6_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "elemwise_add14", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_3", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[199, 0, 0], [200, 0, 0], [188, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm47_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm47_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu46", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[201, 0, 0], [202, 0, 0], [203, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv7_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm48_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm48_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu47", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_relu_5", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[204, 0, 0], [205, 0, 0], [206, 0, 0], [207, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "transpose12", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm49_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm49_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu48", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse__contrib_conv2d_winograd_without_weight_transform_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "4", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[208, 0, 0], [209, 0, 0], [210, 0, 0], [211, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_stage4_conv9_weight_OIHW4o", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm50_gamma_mul_div_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm50_add_beta_expand", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "relu49", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_conv2d_elemwise_add_broadcast_mul_broadcast_add_relu_3", 
+        "num_inputs": "5", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[212, 0, 0], [213, 0, 0], [201, 0, 0], [214, 0, 0], [215, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "global_avg_pool2d0", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_global_avg_pool2d", 
+        "num_inputs": "1", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[216, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "flatten1", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_flatten_flatten", 
+        "num_inputs": "1", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[217, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_dense0_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "resnetv20_dense0_bias", 
+      "inputs": []
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "dense0", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_dense", 
+        "num_inputs": "3", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[218, 0, 0], [219, 0, 0], [220, 0, 0]]
+    }, 
+    {
+      "op": "tvm_op", 
+      "name": "softmax0", 
+      "attrs": {
+        "flatten_data": "0", 
+        "func_name": "fuse_softmax", 
+        "num_inputs": "1", 
+        "num_outputs": "1"
+      }, 
+      "inputs": [[221, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    2, 
+    4, 
+    5, 
+    6, 
+    8, 
+    9, 
+    11, 
+    12, 
+    13, 
+    15, 
+    16, 
+    17, 
+    19, 
+    20, 
+    23, 
+    24, 
+    26, 
+    27, 
+    28, 
+    30, 
+    31, 
+    32, 
+    34, 
+    36, 
+    37, 
+    39, 
+    40, 
+    41, 
+    43, 
+    44, 
+    45, 
+    47, 
+    48, 
+    49, 
+    51, 
+    52, 
+    54, 
+    55, 
+    57, 
+    58, 
+    61, 
+    62, 
+    64, 
+    65, 
+    66, 
+    68, 
+    69, 
+    70, 
+    72, 
+    74, 
+    75, 
+    77, 
+    78, 
+    79, 
+    81, 
+    82, 
+    83, 
+    85, 
+    87, 
+    88, 
+    90, 
+    91, 
+    92, 
+    94, 
+    95, 
+    96, 
+    98, 
+    99, 
+    100, 
+    102, 
+    103, 
+    105, 
+    106, 
+    108, 
+    109, 
+    112, 
+    113, 
+    115, 
+    116, 
+    117, 
+    119, 
+    120, 
+    121, 
+    123, 
+    125, 
+    126, 
+    128, 
+    129, 
+    130, 
+    132, 
+    133, 
+    134, 
+    136, 
+    138, 
+    139, 
+    141, 
+    142, 
+    143, 
+    145, 
+    146, 
+    147, 
+    149, 
+    151, 
+    152, 
+    154, 
+    155, 
+    156, 
+    158, 
+    159, 
+    160, 
+    162, 
+    164, 
+    165, 
+    167, 
+    168, 
+    169, 
+    171, 
+    172, 
+    173, 
+    175, 
+    176, 
+    177, 
+    179, 
+    180, 
+    182, 
+    183, 
+    185, 
+    186, 
+    189, 
+    190, 
+    192, 
+    193, 
+    194, 
+    196, 
+    197, 
+    198, 
+    200, 
+    202, 
+    203, 
+    205, 
+    206, 
+    207, 
+    209, 
+    210, 
+    211, 
+    213, 
+    214, 
+    215, 
+    219, 
+    220
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    44, 
+    45, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59, 
+    60, 
+    61, 
+    62, 
+    63, 
+    64, 
+    65, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    82, 
+    83, 
+    84, 
+    85, 
+    86, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    95, 
+    96, 
+    97, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    107, 
+    108, 
+    109, 
+    110, 
+    111, 
+    112, 
+    113, 
+    114, 
+    115, 
+    116, 
+    117, 
+    118, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    127, 
+    128, 
+    129, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    140, 
+    141, 
+    142, 
+    143, 
+    144, 
+    145, 
+    146, 
+    147, 
+    148, 
+    149, 
+    150, 
+    151, 
+    152, 
+    153, 
+    154, 
+    155, 
+    156, 
+    157, 
+    158, 
+    159, 
+    160, 
+    161, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    167, 
+    168, 
+    169, 
+    170, 
+    171, 
+    172, 
+    173, 
+    174, 
+    175, 
+    176, 
+    177, 
+    178, 
+    179, 
+    180, 
+    181, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    191, 
+    192, 
+    193, 
+    194, 
+    195, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    207, 
+    208, 
+    209, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    221, 
+    222, 
+    223
+  ], 
+  "heads": [[222, 0, 0]], 
+  "attrs": {
+    "storage_id": ["list_int", [
+        7, 
+        8, 
+        9, 
+        0, 
+        10, 
+        11, 
+        12, 
+        1, 
+        13, 
+        14, 
+        0, 
+        15, 
+        16, 
+        17, 
+        1, 
+        18, 
+        19, 
+        20, 
+        2, 
+        21, 
+        22, 
+        1, 
+        0, 
+        23, 
+        24, 
+        1, 
+        25, 
+        26, 
+        27, 
+        2, 
+        28, 
+        29, 
+        30, 
+        1, 
+        31, 
+        2, 
+        32, 
+        33, 
+        1, 
+        34, 
+        35, 
+        36, 
+        0, 
+        37, 
+        38, 
+        39, 
+        1, 
+        40, 
+        41, 
+        42, 
+        0, 
+        43, 
+        44, 
+        1, 
+        45, 
+        46, 
+        2, 
+        47, 
+        48, 
+        1, 
+        0, 
+        49, 
+        50, 
+        2, 
+        51, 
+        52, 
+        53, 
+        1, 
+        54, 
+        55, 
+        56, 
+        2, 
+        57, 
+        1, 
+        58, 
+        59, 
+        2, 
+        60, 
+        61, 
+        62, 
+        0, 
+        63, 
+        64, 
+        65, 
+        2, 
+        66, 
+        0, 
+        67, 
+        68, 
+        2, 
+        69, 
+        70, 
+        71, 
+        1, 
+        72, 
+        73, 
+        74, 
+        2, 
+        75, 
+        76, 
+        77, 
+        1, 
+        78, 
+        79, 
+        2, 
+        80, 
+        81, 
+        0, 
+        82, 
+        83, 
+        2, 
+        1, 
+        84, 
+        85, 
+        0, 
+        86, 
+        87, 
+        88, 
+        2, 
+        89, 
+        90, 
+        91, 
+        0, 
+        92, 
+        2, 
+        93, 
+        94, 
+        0, 
+        95, 
+        96, 
+        97, 
+        1, 
+        98, 
+        99, 
+        100, 
+        0, 
+        101, 
+        1, 
+        102, 
+        103, 
+        0, 
+        104, 
+        105, 
+        106, 
+        2, 
+        107, 
+        108, 
+        109, 
+        0, 
+        110, 
+        2, 
+        111, 
+        112, 
+        0, 
+        113, 
+        114, 
+        115, 
+        1, 
+        116, 
+        117, 
+        118, 
+        0, 
+        119, 
+        1, 
+        120, 
+        121, 
+        0, 
+        122, 
+        123, 
+        124, 
+        2, 
+        125, 
+        126, 
+        127, 
+        0, 
+        128, 
+        129, 
+        130, 
+        2, 
+        131, 
+        132, 
+        0, 
+        133, 
+        134, 
+        3, 
+        135, 
+        136, 
+        1, 
+        0, 
+        137, 
+        138, 
+        2, 
+        139, 
+        140, 
+        141, 
+        3, 
+        142, 
+        143, 
+        144, 
+        4, 
+        145, 
+        1, 
+        146, 
+        147, 
+        2, 
+        148, 
+        149, 
+        150, 
+        3, 
+        151, 
+        152, 
+        153, 
+        4, 
+        154, 
+        155, 
+        156, 
+        0, 
+        3, 
+        4, 
+        157, 
+        158, 
+        5, 
+        6]], 
+    "shape": ["list_shape", [
+        [1, 3, 224, 224], 
+        [3, 1, 1], 
+        [3, 1, 1], 
+        [1, 3, 224, 224], 
+        [16, 3, 7, 7, 4], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 112, 112], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [8, 64, 1, 1, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [6, 6, 8, 64, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [32, 64, 1, 1, 8], 
+        [32, 64, 1, 1, 8], 
+        [1, 256, 56, 56], 
+        [1, 256, 56, 56], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 56, 56], 
+        [8, 256, 1, 1, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [6, 6, 8, 64, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [32, 64, 1, 1, 8], 
+        [1, 256, 56, 56], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 56, 56], 
+        [8, 256, 1, 1, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [6, 6, 8, 64, 8], 
+        [64, 1, 1], 
+        [64, 1, 1], 
+        [1, 64, 56, 56], 
+        [32, 64, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 56, 56], 
+        [16, 256, 1, 1, 8], 
+        [128, 1, 1], 
+        [1, 128, 56, 56], 
+        [128, 128, 3, 3], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [64, 128, 1, 1, 8], 
+        [64, 256, 1, 1, 8], 
+        [1, 512, 28, 28], 
+        [1, 512, 28, 28], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 28, 28], 
+        [16, 512, 1, 1, 8], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [6, 6, 8, 128, 16], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [64, 128, 1, 1, 8], 
+        [1, 512, 28, 28], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 28, 28], 
+        [16, 512, 1, 1, 8], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [6, 6, 8, 128, 16], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [64, 128, 1, 1, 8], 
+        [1, 512, 28, 28], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 28, 28], 
+        [16, 512, 1, 1, 8], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [6, 6, 8, 128, 16], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 28, 28], 
+        [64, 128, 1, 1, 8], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 28, 28], 
+        [32, 512, 1, 1, 8], 
+        [256, 1, 1], 
+        [1, 256, 28, 28], 
+        [256, 256, 3, 3], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [64, 512, 1, 1, 16], 
+        [1, 1024, 14, 14], 
+        [1, 1024, 14, 14], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [32, 1024, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [6, 6, 32, 256, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [1, 1024, 14, 14], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [32, 1024, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [6, 6, 32, 256, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [1, 1024, 14, 14], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [32, 1024, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [6, 6, 32, 256, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [1, 1024, 14, 14], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [32, 1024, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [6, 6, 32, 256, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [1, 1024, 14, 14], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [32, 1024, 1, 1, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [6, 6, 32, 256, 8], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [1, 256, 14, 14], 
+        [128, 256, 1, 1, 8], 
+        [1024, 1, 1], 
+        [1024, 1, 1], 
+        [1, 1024, 14, 14], 
+        [64, 1024, 1, 1, 8], 
+        [512, 1, 1], 
+        [1, 512, 14, 14], 
+        [512, 512, 3, 3], 
+        [512, 1, 1], 
+        [1, 512, 7, 7], 
+        [512, 512, 1, 1, 4], 
+        [512, 1024, 1, 1, 4], 
+        [1, 2048, 7, 7], 
+        [1, 2048, 7, 7], 
+        [2048, 1, 1], 
+        [2048, 1, 1], 
+        [1, 2048, 7, 7], 
+        [128, 2048, 1, 1, 4], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 7, 7], 
+        [6, 6, 64, 512, 8], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 7, 7], 
+        [512, 512, 1, 1, 4], 
+        [1, 2048, 7, 7], 
+        [2048, 1, 1], 
+        [2048, 1, 1], 
+        [1, 2048, 7, 7], 
+        [128, 2048, 1, 1, 4], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 7, 7], 
+        [6, 6, 64, 512, 8], 
+        [512, 1, 1], 
+        [512, 1, 1], 
+        [1, 512, 7, 7], 
+        [512, 512, 1, 1, 4], 
+        [2048, 1, 1], 
+        [2048, 1, 1], 
+        [1, 2048, 7, 7], 
+        [1, 2048, 1, 1], 
+        [1, 2048], 
+        [1000, 2048], 
+        [1000], 
+        [1, 1000], 
+        [1, 1000]]], 
+    "dtype": ["list_int", [
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0]], 
+    "dltype": ["list_str", [
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32"]]
+  }
+}
